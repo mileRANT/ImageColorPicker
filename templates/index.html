@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Color Palette</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-Hello World.
+    <header>
+        <h1>Color Palette Project</h1>
+        <h2>A project using Flask, Python, HTML, CSS</h2>
+        <p>
+            Upload an image. Top 10 colors will be shown. Colors can be shown more than once.
+        </p>
+    </header>
+    <form action = "/" method = "POST" enctype = "multipart/form-data">
+         <input type = "file" name = "file" required />
+         <input type = "submit"/>
+    </form>
 </body>
 </html>
